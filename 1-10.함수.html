@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var x = 10;
+      var vat = 0.1;
+      var tax = x * vat;
+
+      // 특정 기능을 수행하도록 작성된 코드블록
+      // function name(파라미터) {
+      //  코드
+      // }
+
+      // name(파라미터)   -- 함수 호출
+
+      function calculateTax(profit) {
+        var vat = 0.1;
+        var tax = profit * vat;
+        return tax;
+      }
+
+      var tax = calculateTax(98);
+      console.log(tax);
+
+      function calulator(x, y, op) {
+        if (op == "+") {
+          return x + y;
+        } else if (op == "-") {
+          return x - y;
+        }
+      }
+
+      var plus = calulator(5, 7, "+");
+      console.log(plus);
+
+      var minus = calulator(5, 7, "-");
+      console.log(minus);
+    </script>
+  </body>
+</html>
