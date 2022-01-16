@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Boolean
+      var x = true;
+      console.log(x); // true
+      var y = new Boolean(true);
+
+      console.log(x == y); // true
+      console.log(x === y); // false
+
+      console.log(typeof x); // boolean
+      console.log(typeof y); // object
+
+      console.log(Boolean(10 > 9)); // true
+      console.log(10 > 8); // true
+
+      var x = 0;
+      console.log(x); // 0
+      console.log(Boolean(x)); // false
+
+      var x = ""; // 문자열이 비어있으면 false
+      console.log(Boolean(x)); // false
+      // 문자열이 비어있으면 false 길이가 1 이상이면 true
+    </script>
+  </body>
+</html>
