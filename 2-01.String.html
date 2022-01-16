@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var txt = "ABCDEFGHIJKLMN";
+      console.log("문자열.length : " + txt.length);
+
+      // indexOf(param)
+      // 찾고자하는 문자가 있는지 없는지 체크할 때 많이 사용
+      var str = "Please locate where 'locate'";
+      console.log("문자열.indexOf('locate') : " + str.indexOf("locate"));
+
+      // if()
+      if (str.indexOf("John") > -1) {
+        console.log("locate 문자발견");
+      }
+
+      // lastIndexOf()
+      console.log(
+        "문자열.lastIndexOf('locate') : " + str.lastIndexOf("locate")
+      );
+
+      // search()
+      console.log(str.search("locate"));
+
+      // slice(start, end)
+      var str = "Apple, Banana, Kiwi";
+      // console.log(str.slice(7, 13));
+      // console.log(str.slice(7));
+      // console.log(str.slice(-12, -6));
+
+      // substring(start, end)
+      console.log(str.substring(7, 13));
+
+      // substr(strat, length) - 이미 정해진 자리일 때 빨리 찾을 수 있다.
+      console.log(str.substr(7, 6));
+
+      var birthday = "970527";
+      console.log(birthday.substr(0, 2));
+      console.log(birthday.substr(2, 2));
+      console.log(birthday.substr(4, 2));
+
+      var birthday = "1997-05-27";
+      console.log(birthday.substring(0, birthday.indexOf("-")));
+
+      // replace() 발견된 처음 것만 변경됨.(정규식을 쓰면 다 바꿀 수 있음)
+      // var str = "Please visit here!";
+      // var str2 = str.replace("here", "there");
+      // console.log(str2);
+
+      // var str = "Please visit here here here!";
+      // var str2 = str.replace("here", "there");
+      // console.log(str2);
+
+      var str = "Please visit here HERE here!";
+      var str2 = str.replace(/here/gi, "there");
+      console.log(str2);
+
+      // toUppercase()
+      console.log(str.toUpperCase());
+
+      // toLowercase()
+      console.log(str.toLowerCase());
+
+      // concat(...param)
+      var txt1 = "Hello";
+      var txt2 = "World!";
+      var txt3 = txt1 + " " + txt2;
+      console.log(txt3);
+      var txt4 = txt1.concat(" ", txt2);
+      console.log(txt4);
+
+      // trim() - 문자열 양옆 공백제거
+      var str = "      Hello World!          ";
+      console.log(str);
+      console.log(str.trim());
+
+      // padStart(param1, param2) param1길이로 문자를 만들고 앞의 문자를 param2로 채움
+      var str = "5";
+      console.log(str);
+      console.log(str.padStart(4, 3)); // 3335
+
+      // 년월일에서 일을 맞추고 싶을때  3 -> 03 15 -> 15
+      var str = "3";
+      var str2 = "03";
+      var str3 = "15";
+      console.log(str.padStart(2, 0)); //03
+      console.log(str2.padStart(2, 0)); //03
+      console.log(str3.padStart(2, 0)); //15
+
+      // padEnd(param1, param2) param1길이로 문자길이를 맞추고 뒤의 문자를 param2로 채움
+      console.log(str.padEnd(4, 0));
+
+      // charAt()
+      var str = "Hello World";
+      console.log(str.charAt(0));
+
+      // split()
+      // 키워드 검색할 때 상품의 태그도 DB에 저장한다.
+      var tags = "키보드,기계식,블루투스";
+      var arr = tags.split(",");
+      console.log(arr);
+
+      var birthday = "1997-06-12";
+      var arr2 = birthday.split("-");
+      console.log(arr2);
+    </script>
+  </body>
+</html>
