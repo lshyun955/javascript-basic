@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Number
+
+      var x = 123;
+      // toString();
+      console.log(x.toString());
+
+      // toFixed()
+      // 지정된 소수점 자리수까지 반올림으로 표기
+      var x = 123999.567243;
+      console.log(x.toFixed(2));
+
+      // toPrecision()
+      var x = 10.565;
+      console.log(x.toPrecision(2));
+
+      var x = Number("10"); // 숫자 10
+      var x = Number(true); // 숫자 1
+      var x = Number(false); // 숫자 0
+
+      console.log(Number("       10    ")); // 10
+      console.log(Number("       10.33    ")); // 10.33
+      console.log(Number("       10,33    ")); // NaN
+
+      // NaN - Not a Number
+
+      // parseInt() 정수형 리턴 3.14 --> 3
+      console.log(parseInt("3")); // 3
+      console.log(parseInt("3.14")); // 3
+      console.log(parseInt("10 33")); // 10
+      console.log(parseInt("12years")); // 12
+      console.log(parseInt("years12")); // NaN
+
+      // parseFloat()
+      console.log(parseFloat("3")); // 3
+      console.log(parseFloat("3.14")); // 3.14
+      console.log(parseFloat("3.14 asda")); // 3.14
+      console.log(parseFloat("asda 3.14")); // NaN
+    </script>
+  </body>
+</html>
