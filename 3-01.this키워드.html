@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="this.style.backgroundColor='red'">
+      버튼
+    </button>
+
+    <button type="button" onclick="callFunc(this);">버튼</button>
+    <select onchange="changeSelect(this);">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <script>
+      console.log(this);
+
+      var person = {
+        firstName: "John",
+        lastname: "Doe",
+        fullName: function () {
+          return this.firstName.concat(" ", this.lastname);
+        },
+      };
+      console.log(person.fullName());
+
+      function myFunction() {
+        console.log(this);
+      }
+
+      myFunction();
+
+      function callFunc(this2) {
+        console.log(this2);
+      }
+      function changeSelect(obj) {
+        console.log(obj.value);
+      }
+    </script>
+  </body>
+</html>
