@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sum1(x1, x2) {
+        var y = x1 + x2;
+        console.log(y);
+        return y;
+      }
+      sum1(5, 7);
+
+      function sum2(x1, x2, x3) {
+        var y = x1 + x2 + x3;
+        console.log(y);
+        return y;
+      }
+
+      sum2(5, 7, 3);
+
+      function sum3(...args) {
+        var total = 0;
+        // for (var a of x) {
+        //   total += a;
+        // }
+        args.forEach(function (x, idx) {
+          console.log(idx);
+          total += x;
+        });
+        console.log(total);
+        return total;
+      }
+      sum3(3, 3, 3, 3, 4);
+    </script>
+  </body>
+</html>

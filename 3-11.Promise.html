@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      // Promise
+      //
+
+      // var x = 1;
+
+      // 서버 호출해서 데이터를 받아오는 함수.
+      // y = callServerData();
+
+      // var z = x + 2;
+
+      // axios
+      var url =
+        "https://0301bd8c-1b16-4c50-922e-cace49196624.mock.pstmn.io/productList";
+      // var data = axios.get(url).then(function (response) {
+      //   console.log(response.data);
+      //   return response.data;
+      // });
+
+      function getData() {
+        // promise
+        return new Promise(function (resolve, rejct) {
+          axios.get(url).then(function (response) {
+            console.log(response.data.products);
+            resolve(response.data.products);
+          });
+        });
+      }
+      var total = 0;
+      getData().then(function (data) {
+        for (var item of data) {
+          total += item.price;
+        }
+        console.log(total);
+      });
+    </script>
+  </body>
+</html>
